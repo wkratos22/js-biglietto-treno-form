@@ -1,0 +1,94 @@
+.bg-color{
+    background-color: rgb(184, 0, 77);
+}
+
+.target-color{
+    background-color: rgb(255, 247, 231);
+    width: 70%;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.padding{
+    padding: 20px;
+}
+
+.font{
+    font: 1.2em "Fira Sans", sans-serif;
+}
+
+/* TITOLI */
+.h1{
+    font:"Fira Sans", sans-serif;
+    color: white;
+    text-align: center;
+}
+/* FINE TITOLI */
+
+/* COLONNE */
+.div_colonna{
+   margin-left: 10%;
+
+}
+
+.input{
+    border-radius: 5px;
+    border: 1px solid rgb(184, 0, 77);
+}
+
+.p{
+    color: rgb(184, 0, 77);
+}
+/* FINE COLONNE */
+
+/* BOTTONI */
+.button{
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-top: 2%;
+    
+}
+
+.span{
+    color:rgb(184, 0, 77);
+    font-weight: 600;
+}
+
+.text-center{
+    text-align: center;
+}
+/* FINE BOTTONI */
+
+.select{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(184, 0, 77);
+    border-radius: 5px;
+}
+
+.biglietto_generato{
+    background-color: rgb(255, 247, 231);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.larghezza-biglietto{
+    margin-left: 2%;
+}
+
+.nome-pass{
+    background-color: rgb(150, 150, 150);
+    height: 150px;
+}
+
+.right{
+    margin-right: 10%;
+}
+
+.nome{
+    margin-left: 37px;
+    font-weight: 700;
+}
+
+/* .none{
+    display: none;
+} */
