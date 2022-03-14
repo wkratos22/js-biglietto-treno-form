@@ -36,22 +36,17 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-4 col-md-4 col-lg-3 mb-3  div_colonna">
-                    <input class="input" type="text" id="myText">
+                    <input class="input" type="text" id="name">
                 </div>
                 <div class="col-4 col-md-4 col-lg-3 mb-3">
-                    <input class="input" type="number" id="myText">
+                    <input class="input" type="number" id="chilometri">
                 </div>
                 <div class="col-4 col-md-4 col-lg-3 mb-3">
-                    <!-- <input class="input" type="text" id="myText" selected="selected" value="Ssdfd"> -->
-                    <form>
-                        <fieldset>
-                            <select  class="select" name="eta">
-                                <option value="" selected="selected">minorenne</option>
-                                <option value="">maggiorenne</option>
-                                <option value="">over 65</option>
-                            </select>
-                        </fieldset>
-                    </form>
+                    <select id="eta" class="select" name="eta">
+                        <option id="option1" value="minorenne">minorenne</option>
+                        <option id="option2" value="maggiorenne">maggiorenne</option>
+                        <option id="option3" value="over65">over 65</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -59,10 +54,8 @@
 
         <!-- BOTTONI -->
         <div class="padding font text-center" id="contenitore_target">
-            <button class="button" id="bottoneShowHide" onclick="casuale(); carrozza(); myFunction()"><span class="span">Genera</span></button>
+            <button type="button" class="button" id="bottoneShowHide" onclick="casuale(); carrozza(); myFunction()"><span class="span">Genera</span></button>
             <button class="button" onclick=""><span class="span">Annulla</span></button>
-            
-
         </div>
         <!-- FINE BOTTONI -->
 
@@ -70,7 +63,7 @@
         <div class="mt-3 padding font" id="contenitore_target3"></div>
     </div>
 
-    <div id="hide" class="none">
+    <div id="tabellaData" class="none">
         <div>
         <h1 class="font mt-1 h1">Il tuo biglietto</h1>
         </div>
@@ -85,15 +78,16 @@
                         <div class="col-lg-3 mb-4">
                             <div class="nome-pass">
                                 <h4 class="text-center"><strong>NOME PASSEGGERO</strong><h4> 
-                                <h4 class="nome" id="demo"></h4>
+                                <h4 class="nome" id="nomePassTabella"></h4>
                             </div>
                         </div>
                         <div class="col-lg-9 mb-4">
                             <div class="margin">                                        
                                 <div class="container text-center">
                                     <div class="row">
-                                        <div class="col-lg-1 mb-3 right">
+                                        <div class="col-lg-2 mb-3 right">
                                             <p>Offerta</p>
+                                            <div id="scontoTabella"></div>
                                         </div>
                                         <div class="col-lg-2 mb-4">
                                             <p>Carrozza</p>
@@ -104,7 +98,8 @@
                                             <div id="casuale"></div>
                                         </div>
                                         <div class="col-lg-2 mb-4">
-                                            <p>Costo biglietto<p>                 
+                                            <p>Costo biglietto<p> 
+                                            <div id="prezzoTabella">0.00€</div>                
                                         </div>
                                     </div>
                                 </div>

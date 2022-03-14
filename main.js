@@ -1,16 +1,63 @@
 
 //età
 // let eta = prompt( "Quanti anni hai?" );
-console.log(eta);
+// console.log(eta);
+
+//Inizio nome
+let nome = document.getElementById("name");
+console.log("nome");
+
+let km = document.getElementById("chilometri");
+console.log("km");
+
+let fasciaEta = document.getElementById("eta");
+console.log("fasciaEta");
+
+let bottoneGenera = document.getElementById("btnGenera");
+console.log("bottoneGenera");
+
+let tabellaDati = document.getElementById("tabellaData");
+
+let nomePasseggero = document.getElementById("nomePassTabella");
+
+let sconto = document.getElementById("scontoTabella");
+
+let prezzoBiglietto = document.getElementById("prezzoTabella");
+
+addEventListener("click",
+
+    function(){
+        //recupero dati di input
+        console.log(nome.value, km.value, fasciaEta.value);
+
+        //stampa del nome
+        nomePasseggero.innerHTML = nome.value;
+
+        if (fasciaEta.value == "minorenne"){
+            sconto.innerHTML = `sconto del : 20%`
+            prezzoBiglietto.innerHTML = `${ (km.value * 0.21) * 0.8 }`
+        }else if (fasciaEta.value == "maggiorenne"){
+            sconto.innerHTML = `Nessuno sconto`    
+            prezzoBiglietto.innerHTML = `${ (km.value * 0.21) }`
+        }else {
+            sconto.innerHTML = `sconto del : 40%`;
+            prezzoBiglietto.innerHTML = `${ (km.value * 0.21) * 0.6 }`
+        }
+
+        //Tabella compare 
+        tabellaDati.classList.remove("none");
+    }
+)
+//fine nome
+
 
 //chilometri
-
-
 let prezzo = 0.21;
 // let chilometri = Number (prompt( "Quanti chilometri vuoi percorrere?" ) );
 console.log(chilometri);
 let prezzoTot = prezzo * chilometri;
 console.log( prezzoTot + "€" );
+
 
 //sconto minorenni 
 if (eta<18){
@@ -36,20 +83,20 @@ if (eta>65){
 }
 
 //bottone
-function myFunction() {
-    var x = document.getElementById("myText").value;
-    document.getElementById("demo").innerHTML = x;
-}
+// function myFunction() {
+//     var x = document.getElementById("myText").value;
+//     document.getElementById("demo").innerHTML = x;
+// }
 
 //numeri random
 function casuale() {
-    num = Math.round(Math.random() * 100000 + 10000);
+    num = Math.floor(Math.random() * 100000 + 10000);
     document.getElementById("casuale").innerHTML = num;
 }
 
 //carrozza
 function carrozza() {
-    num = Math.round(Math.random() * 10 + 1);
+    num = Math.floor(Math.random() * 10 + 1);
     document.getElementById("carrozza").innerHTML = num;
 }
 
